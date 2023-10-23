@@ -9,11 +9,9 @@ exports.run = async({ client, message, args, lang }) => {
 
     async function clear() {
         try {
-            // teste
-            message.delete();
             const fetched = await message.channel.messages.fetch({ limit: totalDelMsg });
             message.channel.bulkDelete(fetched);
-            message.reply(lang.clearchat.quantDelete.replace('+apagadas+', apagadas))
+            message.channel.send(lang.clearchat.quantDelete.replace('+apagadas+', apagadas))
         } catch (e) {
             return message.reply(lang.clearchat.error.replace("+err+", e));
         }
