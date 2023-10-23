@@ -1,0 +1,39 @@
+{
+  "name": "skyreloaded",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "sky.js",
+  "scripts": {
+    "start": "node sky.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroreeis/sky-reloaded.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "pedroreis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedroreeis/sky-reloaded/issues"
+  },
+  "homepage": "https://github.com/pedroreeis/sky-reloaded#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "canvas": "^2.11.2",
+    "chalk": "^4.1.2",
+    "cowsay": "^1.5.0",
+    "cpu-stat": "^2.0.1",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "gifencoder": "^2.0.1",
+    "is-image-url": "^1.1.8",
+    "moment": "^2.29.4",
+    "moment-duration-format": "^2.3.2",
+    "mysql": "^2.18.1",
+    "util": "^0.12.5"
+  }
+}

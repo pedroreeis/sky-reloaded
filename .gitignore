@@ -1,0 +1,10 @@
+node_modules/
+
+miyadb.sql
+
+package-lock.json
+SkyReloaded.zip
+
+.env
+
+utils/mongodb
