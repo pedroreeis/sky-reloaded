@@ -249,7 +249,7 @@ module.exports = class CanvasTemplates {
         const image = await loadImage(avatar);
 
         ctx.drawImage(image, config.height, -config.height / 2, 480, 480);
-        blur(3)
+        blur(4)
         ctx.drawImage(image, 0, 0, config.height, config.height);
 
         const posX = 670;
@@ -312,10 +312,9 @@ module.exports = class CanvasTemplates {
         const smallTextColor = '#F9F9FA';
 
 
-        const details = spotifyInfo.details.replace(/;/g, ",").split(' ').map((e, i) => i % 5 == 0 ? '\n' + e : e).join(' ')
+        const details = spotifyInfo.state.replace(/;/g, ",").split(' ').map((e, i) => i % 7 == 0 ? '\n' + e : e).join(' ') + ": " + spotifyInfo.details.replace(/;/g, ",").split(' ').map((e, i) => i % 5 == 0 ? '\n' + e : e).join(' ')
 
         addText(details, smallTextFont, smallTextColor);
-
 
         const iconSpotify = await loadImage('https://media.discordapp.net/attachments/681503728792371233/701576801692024932/Spotify_Icon_RGB_White.png?width=475&height=475');
         ctx.drawImage(iconSpotify, 290, 10, 40, 40);
