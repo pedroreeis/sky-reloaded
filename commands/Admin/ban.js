@@ -38,7 +38,8 @@ exports.run = async({ client, message, args, lang }) => {
         collector.on('collect', async (i) => {
             if (i.customId === 'ban') {
                 try {
-                    member_in.send('Você foi banido do servidor. Motivo: ' + motivo ? motivo : "Motivo não definido");
+                    const dmChannel = member_in.createDM();
+                    dmChannel.send('Você foi banido do servidor. Motivo: ' + motivo ? motivo : "Motivo não definido");
                     await member_in.ban({ reason: 'Você foi banido do servidor. Motivo: ' + motivo ? motivo : "Motivo não definido" });
                     i.reply('Usuário banido com sucesso!', { ephemeral: true });
                 } catch {
