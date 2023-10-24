@@ -37,8 +37,6 @@ exports.run = async({ client, message, args, lang }) => {
         collector.on('collect', async (i) => {
             if (i.customId === 'kick') {
                 try {
-                    const dmChannel = member_in.createDM();
-                    dmChannel.send('Você foi expulso do servidor. Motivo: ' + motivo ? motivo : "Motivo não definido");
                     await member_in.kick({ reason: 'Você foi expulso do servidor. Motivo: ' + motivo ? motivo : "Motivo não definido" });
                     i.reply('Usuário expulso com sucesso!', { ephemeral: true });
                 } catch {

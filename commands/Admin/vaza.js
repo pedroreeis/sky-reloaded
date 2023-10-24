@@ -14,8 +14,7 @@ exports.run = async({ client, message, args, lang }) => {
     if(!member_in) return message.reply(lang.ban.invalidMember);
 
     try {
-        const dmChannel = member_in.createDM();
-        dmChannel.send('Você foi banido do servidor. Motivo: Via FASTBAN');
+        member_in.send('Você foi banido do servidor. Motivo: Via FASTBAN');
         await member_in.ban({ reason: 'Você foi banido do servidor. Motivo: Via FASTBAN' });
         message.channel.send('Usuário banido com sucesso!', { ephemeral: true });
     } catch {
